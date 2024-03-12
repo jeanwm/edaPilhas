@@ -55,9 +55,21 @@ int espiar(Pilha* pilha) {
 	}
 }
 
+void busca(Pilha* pilha, int valor) {
+	if (!vazia(pilha)) {
+		if (pilha->vetor[pilha->topo - 1] == valor) {
+			printf("\nValor %d encontrado! \n", valor); 
+		}
+	} else {
+		printf("Pilha vazia.");
+		exit(0);
+	}
+}
+
 int main (int argc, char const *argv[])
 {
 	int i, n = 10;
+	int x = 4;
 	
 	Pilha *pilha = criar(n);
 	
@@ -69,6 +81,7 @@ int main (int argc, char const *argv[])
 	
 	printf("\nDesempilhando -> ");
 	while (!vazia(pilha)){
+		busca(pilha, x);
 		printf("%d ", desempilhar(pilha));
 	}
 	
