@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 typedef struct {
 	int* vetor;
 	int capacidade;
@@ -66,6 +67,16 @@ void busca(Pilha* pilha, int valor) {
 	}
 }
 
+void percorrer(Pilha* pilha) {
+	while (!vazia(pilha)) {
+		printf("%d\n", desempilhar(pilha));
+	}
+}
+
+void esvaziar(Pilha* pilha) {
+	pilha->topo = 0;
+}
+
 int main (int argc, char const *argv[])
 {
 	int i, n = 10;
@@ -84,6 +95,8 @@ int main (int argc, char const *argv[])
 		busca(pilha, x);
 		printf("%d ", desempilhar(pilha));
 	}
+	
+	esvaziar(pilha);
 	
 	printf("\n");
 }
