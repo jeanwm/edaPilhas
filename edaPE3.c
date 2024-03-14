@@ -62,7 +62,7 @@ void busca(Pilha *pilha, int valor) {
       		exit(0);
     	}
   	} else {
-    	printf("Valor não encontrado.");
+    	printf("Valor nao encontrado.");
   	}
 }
 
@@ -75,7 +75,7 @@ int main(int argc, char const *argv[]) {
   	Pilha *pilha = criar(n);
 
   	for (i = 1; i <= n; i++) {
-    	printf("Informe o %dº valor da pilha: ", i);
+    	printf("Informe o %do. valor da pilha: ", i);
     	scanf("%d", &x);
 
     	empilhar(pilha, x);
@@ -89,7 +89,7 @@ int main(int argc, char const *argv[]) {
     	desempilhar(pilha);
   	}
 
-  	printf("\nValor não encontrado.");
+  	printf("\nValor nao encontrado.");
 
   	return 0;
 }
