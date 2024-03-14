@@ -47,6 +47,7 @@ char desempilhar(Pilha* pilha) {
 }
 
 int main() {
+	int i;
     char palavra[100];
     printf("Digite uma palavra: ");
     scanf("%s", palavra);
@@ -58,18 +59,18 @@ int main() {
 
     Pilha *pilha = criar(tam);
 
-    for (int i = 0; i < tam; i++) {
+    for (i = 0; i < tam; i++) {
         empilhar(pilha, palavra[i]);
     }
 
     char palavraInversa[100];
-    for (int i = 0; i < tam; i++) {
+    for (i = 0; i < tam; i++) {
         palavraInversa[i] = desempilhar(pilha);
     }
     palavraInversa[tam] = '\0';
 
     int ehPalindromo = 1;
-    for (int i = 0; i < tam; i++) {
+    for (i = 0; i < tam; i++) {
         if (palavra[i] != palavraInversa[i]) {
             ehPalindromo = 0;
             break;
