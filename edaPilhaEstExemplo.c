@@ -42,7 +42,7 @@ int desempilhar(Pilha* pilha) {
 		
 		return valor;
 	} else {
-		printf("Capacidade maxima da pilha alcancada.");
+		printf("Capacidade minima da pilha alcancada.");
 		exit(0);
 	}
 }
